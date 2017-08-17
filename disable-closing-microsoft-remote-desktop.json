@@ -1,0 +1,50 @@
+{
+  "title": "Remote Desktop",
+  "rules": [
+    {
+      "description": "Swap command and control",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command",
+            "modifiers": {
+              "mandatory": ["w"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com\\.microsoft\\.rdc\\.mac"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command",
+            "modifiers": {
+              "mandatory": ["w"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com\\.microsoft\\.rdc\\.mac"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
